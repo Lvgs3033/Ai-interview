@@ -111,22 +111,3 @@ The `nlp_engine.py` module runs these analyses locally (no API calls):
 ```
 
 ---
-
-## 🎤 Speech Recognition
-
-- Click the **microphone button** in the web UI
-- Speak your answer — text appears in real time
-- Click again to stop
-- Requires Chrome, Edge, or Safari with microphone permission
-- Falls back gracefully if not supported
-
----
-
-## ⚙️ Environment Variables
-
-| Variable | Default | Description |
-|---|---|---|
-| `ANTHROPIC_API_KEY` | _(empty)_ | Enables Claude AI coaching feedback |
-| `PORT` | `5000` | Server port |
-| `DEBUG` | `false` | Flask debug mode |
-| `FLASK_SECRET_KEY` | auto | Session secret key |
