@@ -1,7 +1,7 @@
 # 🎯 InterviewIQ — AI Interview Assistant
 
 A full-featured AI-powered interview coaching tool written entirely in Python.
-Includes real-time NLP analysis, speech recognition, and optional Claude AI feedback.
+Includes real-time NLP analysis, speech recognition feedback.
 
 ---
 
@@ -30,13 +30,7 @@ Includes real-time NLP analysis, speech recognition, and optional Claude AI feed
 pip install flask requests colorama
 ```
 
-### 2. Set your Anthropic API key (optional — for AI coaching tips)
-
-```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
-```
-
-### 3. Run the web app
+### 2. Run the web app
 
 ```bash
 python app.py
@@ -84,30 +78,5 @@ The `nlp_engine.py` module runs these analyses locally (no API calls):
 4. **Depth Scoring** — STAR method detection, quantifier extraction, power verb usage
 5. **Filler Word Detection** — Identifies "um", "like", "basically" etc. with counts
 6. **Readability Analysis** — Grade level, type-token ratio, average sentence length
-
----
-
-## 🌐 API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/` | Web UI |
-| GET | `/api/questions` | All questions by category |
-| GET | `/api/sample-answer/<cat>` | Sample answer for category |
-| POST | `/api/analyze` | Analyze a response |
-| GET | `/api/history/<session_id>` | Session history |
-| DELETE | `/api/history/<session_id>` | Clear session history |
-
-### POST /api/analyze
-
-```json
-{
-  "response":   "Your interview answer text...",
-  "question":   "Tell me about yourself.",
-  "category":   "common",
-  "session_id": "sess_abc123",
-  "use_ai":     true
-}
-```
 
 ---
